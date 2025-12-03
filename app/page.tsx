@@ -20,15 +20,15 @@ export default async function Home() {
   const githubAuthUrl = getGitHubAuthUrl();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gradient-to-b from-amber-100 to-amber-50">
       {user ? (
         <UserProfile user={user} />
       ) : (
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">MP6</h1>
+          <h1 className="text-4xl font-bold mb-8 text-amber-900">MP6</h1>
           <a
             href={githubAuthUrl}
-            className="px-8 py-4 bg-gray-800 text-white rounded-lg hover:bg-gray-700 text-xl"
+            className="px-8 py-4 bg-amber-800 text-amber-50 rounded-lg hover:bg-amber-900 text-xl transition-colors shadow-lg"
           >
             Sign in with GitHub
           </a>
